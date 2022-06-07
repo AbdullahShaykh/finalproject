@@ -48,7 +48,7 @@ app.use(function (err, req, res, next) {
 });
 
 mongoose
-  .connect("mongodb+srv://asy:123@cluster0.g2eho.mongodb.net/admin", {
+  .connect("mongodb+srv://asy:123@cluster0.g2eho.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

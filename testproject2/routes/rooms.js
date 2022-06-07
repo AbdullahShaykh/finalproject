@@ -5,8 +5,8 @@ var checkSessionAuth = require("../middlewares/checkSessionAuth");
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let rooms = await room.find();
-  console.log(req.session.user);
   
+  console.log("test")
   res.render("rooms/list", { title: "Book Your Room", rooms });
 });
 router.get("/add", checkSessionAuth, async function (req, res, next) {
